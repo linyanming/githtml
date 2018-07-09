@@ -1,0 +1,165 @@
+#single-page {
+	left: 0px; top: 0px; width: 100%; height: 100%; overflow: hidden; position: relative;
+}
+#section-container {
+	height: 100%; position: relative;
+}
+.section {
+	width: 100%; height: 100%; display: table; position: relative; table-layout: fixed;
+}
+.section .section-content {
+	width: 100%; vertical-align: middle; display: table-cell;
+}
+ul#page-indicator {
+	list-style: none; margin: 0px; padding: 0px; left: 1em; top: 50%; position: absolute; transform: translate3d(0px, -50%, 0px); -webkit-transform: translate3d(0, -50%, 0);
+}
+ul#page-indicator li {
+	border-radius: 50%; width: 0.6em; height: 0.6em; display: block; cursor: pointer; background-color: rgba(0, 0, 0, 0.5);
+}
+ul#page-indicator li + li {
+	margin-top: 1em;
+}
+ul#page-indicator li.active {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+ul#page-indicator li:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+.left {
+	float: left;
+}
+ul.service {
+	list-style: none; padding: 0px; margin-top: 3em; display: inline-block;
+}
+ul.service li {
+	padding: 0px 2.5em; float: left;
+}
+ul.service li + li {
+	border-left-color: rgb(102, 102, 102); border-left-width: 1px; border-left-style: dotted;
+}
+ul.service li a {
+	color: inherit;
+}
+ul.service li a:hover {
+	color: rgb(102, 102, 102); text-decoration: none;
+}
+.btn-down {
+	margin: 0px; padding: 0px; border-radius: 50%; border: currentColor; border-image: none; left: 50%; width: 36px; height: 36px; text-align: center; bottom: 2em; position: absolute; z-index: 10; transform: translate3d(-50%, 0px, 0px); -webkit-transform: translate3d(-50%, 0, 0);
+}
+.btn-down:hover {
+	color: rgb(204, 204, 204); background-color: rgb(51, 51, 51);
+}
+#slide-menu {
+	left: 0px; top: 50px; width: 80px; height: 100%; color: rgb(204, 204, 204); position: fixed; background-color: rgb(51, 51, 51);
+}
+#slide-menu ul.dashboard-menu {
+	list-style: none; margin: 0px; padding: 0px;
+}
+#slide-menu ul.dashboard-menu li {
+	height: 5em; text-align: center; display: block;
+}
+#slide-menu ul.dashboard-menu li a {
+	width: 100%; height: 100%; color: inherit; padding-top: 1em; padding-bottom: 1em; display: block;
+}
+#slide-menu ul.dashboard-menu li a:hover {
+	text-decoration: none; background-color: rgb(102, 102, 102);
+}
+#slide-menu ul.dashboard-menu li.active a {
+	text-decoration: none; background-color: rgb(102, 102, 102);
+}
+#slide-menu ul.dashboard-menu li p {
+	margin-top: 0.3em;
+}
+#slide-content {
+	left: 0px; top: 50px; width: 258px; height: 100%; position: fixed; -ms-overflow-y: auto;
+}
+#slide-menu + #slide-content {
+	left: 80px;
+}
+#slide-content .panel:hover {
+	background-color: rgb(239, 239, 239);
+}
+#slide-content .panel-heading img {
+	width: 50px; height: 50px; vertical-align: top; display: inline-block;
+}
+#slide-content .panel-heading .panel-title {
+	display: inline-block;
+}
+#main-content {
+	padding: 0px; height: 100%; margin-left: 340px; position: relative;
+}
+#device-list .panel-heading img {
+	width: 80px; vertical-align: top; display: inline-block;
+}
+#device-list .panel-heading .panel-title {
+	display: inline-block;
+}
+#device-list .panel-heading h4 {
+	margin-top: 0px;
+}
+#device-list .device-number {
+	color: rgb(153, 153, 153); font-size: 12px; margin-bottom: 5px;
+}
+#device-list .device-collapse {
+	font-size: 12px; margin-top: 0px; margin-bottom: 0px;
+}
+.sensor-list .sensor-item .sensor-img img {
+	vertical-align: top; display: inline-block; max-width: 100px;
+}
+.sensor-list .sensor-item .sensor-info {
+	display: inline-block;
+}
+.sensor-list .sensor-item .sensor-data {
+	padding-top: 1em; display: inline-block;
+}
+.sensor-list .sensor-item .sensor-data p {
+	text-align: center; font-size: 36px;
+}
+.sensor-list .sensor-item .sensor-record {
+	padding-top: 2em; display: inline-block;
+}
+.sensor-list .sensor-item + .sensor-item {
+	margin-top: 5px;
+}
+.sensor-list + .sensor-list {
+	margin-top: 5px;
+}
+#sidebar {
+	left: 0px; top: 50px; width: 238px; bottom: 0px; position: absolute;
+}
+dl.dl-sensor-info.dl-horizontal dt {
+	width: 5em; font-weight: normal;
+}
+dl.dl-sensor-info.dl-horizontal dd {
+	margin-left: 5em;
+}
+dl.dl-sensor-info.dl-horizontal dt + dd {
+	margin-top: 0.5em;
+}
+dl.dl-sensor-info.dl-horizontal dd + dt {
+	margin-top: 0.5em;
+}
+.table-sensor-data th {
+	text-align: center;
+}
+.table-sensor-data td {
+	text-align: center;
+}
+.device-labels {
+	padding: 0.5em 0px;
+}
+.device-labels p + p {
+	margin-top: 0.3em;
+}
+.device-labels label {
+	width: 110px; display: inline-block;
+}
+.device-labels .label {
+	border: 1px solid rgb(204, 204, 204); border-image: none; color: inherit; cursor: pointer;
+}
+.device-labels .label:hover {
+	background-color: rgb(238, 238, 238);
+}
+.device-labels .label + .label {
+	margin-left: 3px;
+}

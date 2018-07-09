@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>JS 实现动态插入输入框以及删除、位置调换</title>
+</head>
+<body>
+  
+ <div id="onFailureDiv" class="alert alert-danger navbar-fixed-top" style="text-align:center; display:none"></div>  
+<div class="container" style="min-height:100%; height:100%;margin-top:100px;">  
+<form id="addressForm" class="form-horizontal" method="post" action="/restaurant/${(user.userId)}/addAddress">  
+<div class="form-group dynamic-collection" id="course-goals-form-group">  
+<div class="col-md-2 control-label"><label>地址</label></div>  
+<div class="col-md-8 controls">  
+<ul id="ItemCourseList" class="list-group sortable-list" data-role="list" style="margin-bottom:10px;"></ul>  
+<div class="input-group">  
+<input id="courseInput" type="text" data-role="item-input" class="form-control">  
+<span class="input-group-btn">  
+<button id="addItemCourse" class="btn btn-default" type="button" data-role="item-add" >添加</button>  
+</span>  
+</div>  
+</div>  
+</div>  
+</form>  
+<!-- container -->  
+</div>  
+<script type="text/javascript" src="${app.basePath}/resources/js/jquery.form.js"></script>  
+<script>  
+$.schoolFn = {  
+addCourseItem: function(obj){  
+$("#ItemCourseList").append("<li class='list-group-item clearfix'><span class='glyphicon glyphicon-resize-vertical sort-handle'></span>"+obj+"<input type='hidden' name='goals' value='"+obj+"'><button type='button' class='close delete-btn deleteItem' onclick='deleteCourseItem(this);' title='删除'>×</button></li>");  
+},  
+addItem: function(obj){  
+$("#itemList").append("<li class='list-group-item clearfix'><span class='glyphicon glyphicon-resize-vertical sort-handle'></span>"+obj+"<input type='hidden' name='audiences' value='"+obj+"'><button type='button' class='close delete-btn deleteItem' onclick='deleteItem(this);' title='删除'>×</button></li>");  
+},  
+}  
+$("#addItemCourse").click(function(){  
+var item=$('#courseInput').val();  
+if(item.trim()==""){  
+$('#courseInput').val("");  
+}else{  
+$.schoolFn.addCourseItem(item);  
+$('#courseInput').val("");  
+}  
+});  
+function deleteCourseItem(obj){  
+$(obj).parent().replaceWith("");  
+}  
+</script>  
+<script>  
+$(document).ready(function(){  
+$('#addressForm').ajaxForm(function(json) {  
+if(json.status == "success") {  
+$("#onFailureDiv").html("添加成功").slideDown().delay(3000).hide(1000);  
+}else {  
+$("#onFailureDiv").html(json.errorMsg).slideDown().delay(3000).hide(1000);  
+}  
+});  
+});  
+</script>  
+		
+</body>
+</html>
