@@ -1,6 +1,7 @@
 ﻿<?php
 require('./class/php_main.php');//主类
 require('./class/db_o.php');//数据库类
+require('./check_login.php');
 $mysql = new db_o; 
 ?>
 <!doctype html>

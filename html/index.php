@@ -1,0 +1,162 @@
+<?php
+
+require('./check_login.php');
+
+
+?>
+<!DOCTYPE html>
+<html>
+<head>
+		<title>Home</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+		 
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/myIndex.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/footer.css" rel="stylesheet" type="text/css" media="all" />
+	
+		<!-- js -->
+		<script src="js/jquery.min.js"></script>
+		<!-- //js -->
+		<!-- for-mobile-apps -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Flatter Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+		Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+				function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<!-- //for-mobile-apps -->
+		<!-- start-smoth-scrolling -->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+<!-- start-smoth-scrolling -->
+</head>
+	
+<body>
+<!-- banner -->
+	<div class="banner">
+	<div class="container">
+		<div class="navi">
+			<div class="head-logo">
+				<div class="logo">
+					
+				</div>
+			
+				<div class="clearfix"> </div>
+			</div>
+			<div class="top-nav">
+				<span class="menu"><img src="images/menu.png" alt="" /></span>
+					<ul class="nav1">
+						<li><a href="index.html" class="active">首页</a></li>
+						<li><a href="monitor.php" class="active">环境监测</a></li>
+						
+					</ul>
+					<script> 
+							   $( "span.menu" ).click(function() {
+								 $( "ul.nav1" ).slideToggle( 300, function() {
+								 // Animation complete.
+								  });
+								 });
+							
+					</script>
+			</div>
+			<div class="clearfix"> </div>
+			<div class="banner-info">
+				<h3>智慧环境监测系统 </h3>
+				<p class="para">系统可以监测水文和气象环境 <span>包括实时在线和实验室检测各项参数</span></p>
+			</div>
+			<div class="banner-icons">
+				<ul>
+					<li><a href="#" > </a></li>
+					<li><a href="#" > </a></li>
+					<li><a href="#" > </a></li>
+				</ul>
+				<div class="fig1">
+					<p><a href="#about" class="scroll"> </a></p>
+				</div>
+			<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	</div>
+<!-- //banner -->
+<!-- banner-bottom -->
+	<div class="banner-bottom">
+	
+	</div>
+<!-- //banner-bottom -->
+
+<!-- about -->
+	<div id="about" class="about">
+	<div class="container">
+		<h4>关于我们</h4>
+		<h2>智慧环境监测装备研发<span>科技创新团队</span></h2>
+		<p>团队以保护我们的碧水蓝天环境为使命，由中科院环境观测研究站和海伯公司的多位<span>专家、学者及工程师组成，其中有6个博士，6个中高级工程师。</span>
+			 智慧环境监测系统由肖航博士带领团队进行创新，研发了多款环境监测装备以及整套<span>物联网监测系统，可以高效地监测多个环境参数，对环境状况进行分析。</span></p>
+		
+	</div>
+	</div>
+<!-- //about -->
+<!-- work -->
+	
+<!-- //work -->
+<!-- map -->
+
+<!-- //map -->
+<!-- footer -->
+	
+<div class="modal fade" id="myModal_logo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <form action="http://www.tlink.io/user/login.htm" name="loginForm" method="post" id="loginForm">
+            <div class="modal-dialog" style="margin-top:8%;">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div style="padding-bottom:10px;" class="modal-password">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                ×
+                            </button>
+                        </div>
+
+                        <div style="margin-bottom:0px;" class="modal-password">
+                            <input class="form-control login_input" data-val="true" data-val-required="The 请输入用户名/邮箱 field is required." id="lo_userName" name="loginAccount" placeholder="请输入用户名/邮箱" type="text" autocomplete="off">
+                            <p class="glyphicon glyphicon-user"></p>
+                        </div>
+                        <div style="margin-bottom:0px;" class="modal-password">
+                            <input class="form-control login_input" data-val="true" data-val-required="The 请输入密码 field is required." id="lo_password" name="loginPassword" placeholder="请输入密码" type="password" autocomplete="off">
+                            <p class="glyphicon glyphicon-lock"></p>
+                        </div>
+                       	              
+                        <div class="modal-checkbox">
+                            <div class="pull-left">
+                            <input data-val="true" data-val-required="演示账号登录" id="RememberMe" name="RememberMe" type="checkbox" value="" onclick="demoLogin();">
+                                演示账号登录
+                            </div>
+                            <div class="pull-right">
+                                <a href="http://www.tlink.io/find_pwd_1.htm">忘记密码？</a>
+                            </div>
+                        </div>
+                        
+                        <input style="margin-top:20px;color:#fff;" type="button" class="btn btn-lg btn-block btn_logo" value="登录" onclick="oncheck();">
+                        <div style="margin-top: 10px">
+						<div>
+                               使用合作网站账号登录:&nbsp;&nbsp;
+                               <a href="http://www.tlink.io/union/qqLogin.htm"><img src="./TLINK-物联网,工业、农业、智能家居等相关物联网云服务运营专家_files/qq.png" title="QQ登陆"></a>&nbsp;&nbsp;
+                               <a href="https://open.weixin.qq.com/connect/qrconnect?appid=wxc855f4c4e69f7ae5&amp;redirect_uri=http://www.tlink.io/union/wxLogin.htm&amp;response_type=code&amp;scope=snsapi_login&amp;state=t#wechat_redirect"><img src="./TLINK-物联网,工业、农业、智能家居等相关物联网云服务运营专家_files/wx.png" width="22px" title="微信登陆"></a>
+                        </div>
+                     	</div>
+                     	
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    
+</body>
+</html>
