@@ -26,7 +26,7 @@ if (isset($_POST['user'])) {
 
 <div class="Login_heand dk">
     <a href="#" class="Login_logo fl">
-        <img src="images/logo.png" class="fl"/><p class="fl">智能环境监测系统</p><div class="clear"></div>
+        <img src="images/logo.png" style = "width:70px;height:50px" class="fl"/><p class="fl">智能环境监测系统</p><div class="clear"></div>
     </a>
     <div class="clear"></div>
 </div>
