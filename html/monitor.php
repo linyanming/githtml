@@ -59,8 +59,8 @@ $mysql = new db_o;
 			<div class="top-nav">
 				<span class="menu"><img src="images/menu.png" alt="" /></span>
 					<ul class="nav1">
-						<li><a href="index.html">首页</a></li>
-						<li><a href="monitor.html" class="active">环境监测</a></li>
+						<li><a href="index.php">首页</a></li>
+						<li><a href="monitor.php" class="active">环境监测</a></li>
 						
 					</ul>
 					<script> 
@@ -81,7 +81,7 @@ $mysql = new db_o;
 	
 	<!-- Portfolio Starts Here -->
 	
-		<div style="width:100%;height:700px;border:#ccc solid 1px;" id="dituContent"></div>
+		<div style="width:100%;height:100%;border:#ccc solid 1px;" id="dituContent"></div>
 				
 		
 			
@@ -119,7 +119,8 @@ var marker_temp = [{title:"<?php echo $r['location_name'] ?>",content:"状态：
        	temp = marker_array[i];
        	addMarker(temp);
       }
-       
+      setMapEvent() 
+      addMapControl()
    }   
 
 //创建地图函数：
@@ -173,6 +174,33 @@ var marker_temp = [{title:"<?php echo $r['location_name'] ?>",content:"状态：
   })()
        }
    }
+   //地图事件设置函数：
+    
+	function setMapEvent()
+	{   
+		mymap.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+		mymap.enableScrollWheelZoom();//启用地图滚轮放大缩小
+		mymap.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+		mymap.enableKeyboard();//启用键盘上下左右键移动地图
+	}
+	    
+
+	//地图控件添加函数：
+
+	function addMapControl()
+	{
+		//向地图中添加缩放控件
+		var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+		mymap.addControl(ctrl_nav);
+		//向地图中添加缩略图控件
+		var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+		mymap.addControl(ctrl_ove);
+		//向地图中添加比例尺控件
+		var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+		mymap.addControl(ctrl_sca);
+	}
+    
+    
    //创建InfoWindow
    function createInfoWindow(markerArr,i){
        var json = markerArr[i];
@@ -188,3 +216,5 @@ var marker_temp = [{title:"<?php echo $r['location_name'] ?>",content:"状态：
    initMap();//创建和初始化地图
 </script>
 <!-- //footer -->
+</body>
+</html>
