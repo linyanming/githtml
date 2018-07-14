@@ -54,7 +54,7 @@ require('./check_login.php');
 			<div class="top-nav">
 				<span class="menu"><img src="images/menu.png" alt="" /></span>
 					<ul class="nav1">
-						<li><a href="index.html" class="active">首页</a></li>
+						<li><a href="index.php" class="active">首页</a></li>
 						<li><a href="monitor.php" class="active">环境监测</a></li>
 						
 					</ul>
