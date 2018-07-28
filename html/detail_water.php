@@ -8,7 +8,7 @@ $mysql = new db_o;
 <html>
 <head>
 <meta charset="utf-8">
-<title>环境数据</title>
+<title>水质</title>
 		<link href="css1/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
         <link href="css1/style.css" rel="stylesheet" type="text/css" media="all" />
         <link href="css1/myIndex.css" rel="stylesheet" type="text/css" media="all" />
@@ -34,7 +34,7 @@ $select_sentence = "select location_name from locations where id = ".$location_i
 $s_result = $mysql->s($select_sentence);
 $r = $s_result->fetch_array(MYSQLI_ASSOC)
 ?>
-                <p class="in_sen_title" id="divicename_200005075"><?php echo $r['location_name'] ?>环境数据</p>  
+                <p class="in_sen_title" id="divicename_200005075"><?php echo $r['location_name'] ?>水质</p>  
                 	<?php
                 	$sql_str = "select * from monitor_".$location_id." order by id desc limit 1";
                 	$result = $mysql->s($sql_str);
@@ -46,13 +46,13 @@ $r = $s_result->fetch_array(MYSQLI_ASSOC)
                 		{
                 			continue;
                 		} 
-                		$sql_str = "select * from device_view where serial='".$col_name->name."'";
+                		$sql_str = "select * from device_view where serial='".$col_name->name."' and (type_id >= 1 and type_id <= 9 or type_id = 17 or type_id = 18)";
                 		$temp = $mysql->s($sql_str);
 						if($temp->num_rows == 0)
 						{
 							continue;
 						}
-                		$r = $temp->fetch_array(MYSQLI_ASSOC);
+						$r = $temp->fetch_array(MYSQLI_ASSOC);
 						$time_echo = $row_info['record_time'];
 						if($row_info[$r['serial']] == 0)
 						{

@@ -1,0 +1,5 @@
+select distinct id from device_view where type_id >= 1 and type_id <= 9 or type_id = 17 or type_id = 18;
+
+select * from monitor_1 order by id desc limit 1;
+
+select * from device_view where serial='0031908278' and (type_id >= 1 and type_id <= 9 or type_id = 17 or type_id = 18);
